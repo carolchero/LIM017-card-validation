@@ -1,0 +1,141 @@
+html, body{
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.titulo{
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #8e8e8e;
+  color: #FFFFFF;
+  padding: 20px;
+
+}
+
+.pasos{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.circulo{
+  height: 25px;
+  width: 25px;
+  border-radius: 20px;
+  background-color: #308cca;
+  margin-right: 10px;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.subtitulo{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  padding: 20px;
+
+}
+.encabezado-tabla{
+  border-bottom: 1px solid;
+}
+.linea{
+  width: 100px;
+  height: 1px;
+  border-top: 1px solid rgba(0,0,0,.12);
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.segunda-col{
+  color: #000;
+  padding:2px;
+}
+
+.primera-col{
+  font-weight: bold;
+  color: black;
+  padding: 2px;
+  width: 150px;
+
+}
+.datos{
+  margin: 0 auto;
+}
+.d-flex{
+  display: flex;
+}
+.d-table{
+  display: table;
+  border-collapse: collapse;
+}
+.d-row{
+  display: table-row;
+}
+.d-cell{
+  display: table-cell;
+}
+.f-bold{
+  font-weight: bold;
+}
+.logo{
+  width: 300px;
+}
+
+.formulario input{
+  height: 25px;
+  border-radius: 5px;
+  margin: 3px;
+  width: 100%;
+}
+
+.btn-paga-aqui{
+  background-color: #203270 ;
+  border-radius: 5px;
+  color: #FFFFFF;
+  cursor: pointer;
+
+}
+.contedor-boton{
+  text-align: center;
+  padding-top: 30px;
+  width: 100%;
+}
+.formulario{
+  text-align: center;
+  background-color: #eeeeee;
+  width: 360px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 20px;
+}
+.boton-pagar{
+  width: 100%;
+  background-color: #6fb5e5;
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+}
+.img-pci{
+  width: 200px;
+}
+.img-visa-ms-am{
+  width: 40px;
+}
+.oculto {
+  display: none;
+}
+
+.mensajeAdvertencia {
+  color: #ff1a1a;
+  text-align: center;
+  padding-right: 80px;
+}
+
+

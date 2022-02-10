@@ -4,10 +4,119 @@
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header>
+      <div class="titulo">
+        PAGO EN LÍNEA
+      </div>
+
+    </header>
+    <main>
+
+      <div id="primeraPantalla">
+        <div>
+          <div class="pasos">
+            <div class="circulo"> 1 </div>
+            <span>Paciente</span>
+            <div class="linea"></div>
+
+            <div class="circulo"> 2 </div>
+            <span>Médico</span>
+            <div class="linea"></div>
+
+            <div class="circulo">3 </div>
+            <span>Pagar</span>
+          </div>
+        </div>
+
+        <div class="subtitulo">Confirmación de datos </div>
+
+        <div class="d-table datos">
+          <div class="d-row encabezado-tabla">
+            <div class="primera-col d-cell">Servicio: </div>
+            <div class="segunda-col d-cell f-bold">Consulta Presencial </div>
+          </div>
+          <div class="d-row">
+            <div class="primera-col d-cell">Médico:</div>
+            <div class="segunda-col">ZAPATA ZAPATA JOSE MANUEL</div>
+          </div>
+
+          <div class="d-row">
+            <div class="primera-col d-cell">Especialidad:</div>
+            <div class="segunda-col d-cell">CARDIOLOGIA</div>
+          </div>
+
+          <div class="d-row">
+            <div class="primera-col d-cell">Fecha de cita:</div>
+            <div class="segunda-col d-cell">19/02/2022</div>
+          </div>
+
+          <div class="d-row">
+            <div class="primera-col d-cell">Paciente:</div>
+            <div class="segunda-col d-cell">CAROL DEL PILAR CHERO PAZ</div>
+          </div>
+
+          <div class="d-row">
+            <div class="primera-col d-cell">Monto a pagar:</div>
+            <div class="segunda-col d-cell">S/.150</div>
+          </div>
+
+        </div>
+        <div class="contedor-boton">
+          <button class="btn-paga-aqui" id="btnPagaAqui">PAGA AQUÍ</button>
+        </div>
+
+      </div>
+
+
+
+
+      <div class="formulario oculto" id="formularioPago">
+        <div>
+          <div><img class="logo" src="./img/logo_carita.png" alt="logo"></div>
+        </div>
+        <div> <span class="f-bold">Recuerda</span> activar las <span class="f-bold">compras por internet</span>   con tu banco</div>
+        <div>
+          <div class="d-flex">
+            <input type="text" name="Tarjeta de credito" placeholder="Número de Tarjeta " maxlength="19" id="cn">
+            <div class="mensajeAdvertencia oculto" id="numeroTarjetaEquivocado"> Debe ingresar un número de tarjeta válido.</div>
+          </div>
+          <div class="d-flex">
+            <input type="text" name="Tarjeta de credito" placeholder="MM" maxlength="2" id="MM">
+            <div class="mensajeAdvertencia oculto" id="mesEquivocado"> Debe ingresar un mes.</div>
+            <div class="mensajeAdvertencia oculto" id="mesErrado"> Debe ingresar un mes correcto.</div>
+            <input type="text" name="Tarjeta de credito" placeholder="AA" maxlength="2" id="YY">
+            <div class="mensajeAdvertencia oculto" id="yearEquivocado"> Debe ingresar un año.</div>
+            <div class="mensajeAdvertencia oculto" id="yearErrado"> Debe ingresar un año correcto.</div>
+            <input type="text" name="Tarjeta de credito" placeholder="CVV" maxlength="3" id="CVV">
+            <div class="mensajeAdvertencia oculto" id="cvvEquivocado"> Debe ingresar un año.</div>
+          </div>
+          <div class="d-flex">
+           <input type="text" name="Tarjeta de credito" placeholder="Nombre Completo" id="name">
+            <div class="mensajeAdvertencia oculto" id="nombreEquivocado"> Debe ingresar un nombre.</div>
+          </div>
+          <div class="d-flex"><input type="text" name="Tarjeta de credito" placeholder="Correo"></div>
+        </div>
+        <div class="d-flex contedor-boton">
+          <button class="boton-pagar" id="botonPagar">
+            Pagar S/150.00
+          </button>
+        </div>
+        <div >
+          <img class="img-pci" src="./img/pci.png" alt="logo">
+          <img class="img-visa-ms-am" src="./img/visa.png" alt="logo">
+          <img class="img-visa-ms-am" src="./img/mc.png" alt="logo">
+          <img class="img-visa-ms-am" src="./img/amex.png" alt="logo">
+
+        </div>
+
+      </div>
+
+    </main>
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
