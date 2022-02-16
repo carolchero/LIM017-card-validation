@@ -35,9 +35,11 @@ function invertirCadena(cadena){
 
 
     cadenaInv = cadena.charAt(i) +cadenaInv;
+
   }
 
   return cadenaInv;
+
 }
 
 function modificarPosicionPares(cadena){

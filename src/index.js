@@ -33,7 +33,7 @@ inputNumero.addEventListener('keydown',(event)=>{
     return;
   }
 
-  console.log(event)
+  //console.log(event)
   if(event.key === 'Backspace'){
     if (valor.charAt(posicionCaret) === ' '){
       event.preventDefault();
@@ -58,7 +58,7 @@ inputNumero.addEventListener('keydown',(event)=>{
        event.target.selectionStart = posicionCaret + 2;
        event.target.selectionEnd = posicionCaret + 2;
      }
-     console.log(ultimoBloqueCuatro);
+    // console.log(ultimoBloqueCuatro);
 })
 
 function  validNumber(){
@@ -66,6 +66,15 @@ function  validNumber(){
   let valor = document.getElementById("cn").value;
   let nuevoValor = valor.replaceAll(' ','');
   let mascara;
+
+  if(valor.trim() === ""){
+    let nombreEquivocado=document.getElementById('numeroNoingresado');
+    nombreEquivocado.classList.remove('oculto');
+  }
+  else{
+    let nombreEquivocado=document.getElementById('numeroNoingresado');
+    nombreEquivocado.classList.add('oculto');
+  }
 
   if (!esTarjetaValida(nuevoValor)){
     numeroTarjetaErrada=document.getElementById('numeroTarjetaEquivocado');
@@ -83,16 +92,19 @@ function  validNumber(){
   }
 }
 
-function maskify(valor){
+function maskify(valor) {
 
-  let cantidad = valor.length - 4;
-  let mascara = '';
-  for(let i = 0; i<cantidad; i++){
-    mascara = mascara + '#';
-  }
-  return '#### #### #### ' + valor.substring((valor.length-4),(valor.length));
+
+    let cantidad = valor.length - 4;
+    let mascara = '';
+    for (let i = 0; i < cantidad; i++) {
+      mascara = mascara + '#';
+    }
+    return mascara + valor.substring((valor.length - 4), (valor.length));
 
 }
+
+
 
 let nombreInput = document.getElementById('name');
 nombreInput.addEventListener('blur',function(){
@@ -111,7 +123,7 @@ function validarTexto(){
     let nombreEquivocado=document.getElementById('nombreEquivocado');
     nombreEquivocado.classList.add('oculto');
   }
-  console.log(nombre);
+  //console.log(nombre);
 }
 
 let mesInput = document.getElementById('MM');
@@ -125,7 +137,7 @@ function validarMes(){
   let mesErrado
   let mes = document.getElementById('MM').value;
   if(isNaN(mes)){
-    mesEquivocado=document.getElementById('mensajeEquivocado')
+    mesEquivocado=document.getElementById('mesEquivocado')
     mesEquivocado.classList.remove('oculto');
 
   }else{
@@ -142,7 +154,7 @@ function validarMes(){
       mesErrado.classList.remove('oculto');
     }
   }
-  console.log(mes);
+ // console.log(mes);
 
 }
 
@@ -183,7 +195,7 @@ function validCvv(){
 
   let cvvEquivocado
   let cvv = document.getElementById('CVV').value;
-  if ( isNaN(cvv)){
+  if ( isNaN(cvv) || cvv === ''||cvv === ' '){
     cvvEquivocado=document.getElementById('cvvEquivocado');
     cvvEquivocado.classList.remove('oculto');
   } else{
@@ -195,11 +207,49 @@ function validCvv(){
   }
 
 }
-
-let enviarInput = document.getElementById('botonPagar');
-enviarInput.addEventListener('blur',function(){
-
+let correoInput = document.getElementById('correo');
+correoInput.addEventListener('blur',function(){
+  validarCorreo();
 })
 
+function validarCorreo(){
+
+  let correo=document.getElementById('correo').value;
+
+  if(correo.trim() === ""){
+    let correoEquivocado=document.getElementById('correoInvalido');
+    correoEquivocado.classList.remove('oculto');
+  }
+  else{
+    let correoEquivocado=document.getElementById('correoInvalido');
+    correoEquivocado.classList.add('oculto');
+  }
+  //console.log(nombre);
+}
+
+let enviarInput = document.getElementById('botonPagar');
+enviarInput.addEventListener('click',function(event){
+  console.log(event.target)
+  enviarDatos();
+
+})
+function enviarDatos(){
+  let formulario = document.getElementById('formularioPago');
+  formulario.classList.add('oculto');
+  let pantallaInput = document.getElementById('pantallaInput');
+  pantallaInput.classList.remove('oculto');
+  let cobro = document.getElementById('pantallaCobro');
+  cobro.classList.remove('oculto');
+}
+
+
+
+
+
+
+
+
 console.log(validator);
+
+
 

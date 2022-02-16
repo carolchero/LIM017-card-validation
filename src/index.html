@@ -83,25 +83,47 @@
         <div>
           <div class="d-flex">
             <input type="text" name="Tarjeta de credito" placeholder="Número de Tarjeta " maxlength="19" id="cn">
-            <div class="mensajeAdvertencia oculto" id="numeroTarjetaEquivocado"> Debe ingresar un número de tarjeta válido.</div>
+
           </div>
-          <div class="d-flex">
-            <input type="text" name="Tarjeta de credito" placeholder="MM" maxlength="2" id="MM">
-            <div class="mensajeAdvertencia oculto" id="mesEquivocado"> Debe ingresar un mes.</div>
-            <div class="mensajeAdvertencia oculto" id="mesErrado"> Debe ingresar un mes correcto.</div>
-            <input type="text" name="Tarjeta de credito" placeholder="AA" maxlength="2" id="YY">
-            <div class="mensajeAdvertencia oculto" id="yearEquivocado"> Debe ingresar un año.</div>
-            <div class="mensajeAdvertencia oculto" id="yearErrado"> Debe ingresar un año correcto.</div>
-            <input type="text" name="Tarjeta de credito" placeholder="CVV" maxlength="3" id="CVV">
-            <div class="mensajeAdvertencia oculto" id="cvvEquivocado"> Debe ingresar un año.</div>
+          <div class="mensajeAdvertencia oculto" id="numeroTarjetaEquivocado"> Debe ingresar un número de tarjeta válido.</div>
+          <div class="mensajeAdvertencia oculto" id="numeroNoingresado"> Debe ingresar un numero.</div>
+          <div class="d-flex datos-card">
+            <div>
+              <input type="text" name="Tarjeta de credito" placeholder="MM" maxlength="2" id="MM">
+              <div class="mensajeAdvertencia oculto" id="mesEquivocado"> Debe ingresar un mes.</div>
+              <div class="mensajeAdvertencia oculto" id="mesErrado"> Debe ingresar un mes correcto.</div>
+            </div>
+            <div>
+              <input type="text" name="Tarjeta de credito" placeholder="AA" maxlength="2" id="YY">
+              <div class="mensajeAdvertencia oculto" id="yearEquivocado"> Debe ingresar un año.</div>
+              <div class="mensajeAdvertencia oculto" id="yearErrado"> Debe ingresar un año correcto.</div>
+            </div>
+            <div>
+              <input type="text" name="Tarjeta de credito" placeholder="CVV" maxlength="3" id="CVV">
+              <div class="mensajeAdvertencia oculto" id="cvvEquivocado"> Debe ingresar un cvv valido.</div>
+
+            </div>
+
+
+
+
+
+
           </div>
+
+
+
           <div class="d-flex">
            <input type="text" name="Tarjeta de credito" placeholder="Nombre Completo" id="name">
-            <div class="mensajeAdvertencia oculto" id="nombreEquivocado"> Debe ingresar un nombre.</div>
+
           </div>
-          <div class="d-flex"><input type="text" name="Tarjeta de credito" placeholder="Correo"></div>
+          <div class="mensajeAdvertencia oculto" id="nombreEquivocado"> Debe ingresar un nombre.</div>
+          <div class="d-flex">
+            <input type="text" name="Tarjeta de credito" placeholder="Correo" id="correo">
+          </div>
+          <div class="mensajeAdvertencia oculto" id="correoInvalido"> Debe ingresar un nombre.</div>
         </div>
-        <div class="d-flex contedor-boton">
+        <div class="d-flex contedor-boton" id="pantallaInput">
           <button class="boton-pagar" id="botonPagar">
             Pagar S/150.00
           </button>
@@ -116,8 +138,32 @@
 
       </div>
 
+      <div id="pantallaCobro" class="oculto">
+
+        <div class="imagenes">
+          <img class="img-pci" src="./img/pci.png" alt="logo">
+          <img class="img-visa-ms-am" src="./img/visa.png" alt="logo">
+          <img class="img-visa-ms-am" src="./img/mc.png" alt="logo">
+          <img class="img-visa-ms-am" src="./img/amex.png" alt="logo">
+
+        </div>
+        <div >
+          <div class="centrar f-bold"> Detalle de Pago</div>
+          <div class="centrar"> Consulta Presencial: S/.150</div>
+          <div class="centrar">Carol del Pilar Chero Paz</div>
+          <div class="centrar">964050365</div>
+          <div class="centrar f-bold">Fecha</div>
+          <div class="centrar">14 Feb 2022   </div>
+          <div class="centrar">09:38 AM</div>
+          </div>
+          <div class="centrar f-bold">Codigo de Operación</div>
+          <div class="centrar">0653289741</div>
+        </div>
+
+
     </main>
-    <footer></footer>
+    <footer>
+    </footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>
