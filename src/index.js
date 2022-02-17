@@ -23,43 +23,7 @@ let inputNumero = document.getElementById('cn');
 inputNumero.addEventListener('blur',function (){
   validNumber();
 })
-inputNumero.addEventListener('keydown',(event)=>{
-  let valor = document.getElementById('cn').value;
-  let posicionCaret = event.target.selectionStart - 1;
-  let primeraParte,segundaParte;
-  let ultimoBloqueCuatro;
 
-  if (valor.length >= 19 || event.key === 'ArrowLeft'||event.key === 'ArrowRight'){
-    return;
-  }
-
-  //console.log(event)
-  if(event.key === 'Backspace'){
-    if (valor.charAt(posicionCaret) === ' '){
-      event.preventDefault();
-      event.stopPropagation();
-      event.target.selectionStart = posicionCaret;
-      event.target.selectionEnd = posicionCaret;
-    }
-    else {
-      document.getElementById('cn').value = valor.trim();
-      event.target.selectionStart = posicionCaret + 1;
-      event.target.selectionEnd = posicionCaret + 1;
-    }
-    return;
-  }
-  ultimoBloqueCuatro = valor.substring(posicionCaret-3,posicionCaret+1); //  "43"
-     if (ultimoBloqueCuatro.length === 4 && !ultimoBloqueCuatro.includes(' ')){
-       primeraParte = valor.substring(0,posicionCaret +1);
-       segundaParte = valor.substring(posicionCaret + 1,valor.length);
-
-       valor = primeraParte + ' ' + segundaParte.trim();
-       document.getElementById('cn').value = valor;
-       event.target.selectionStart = posicionCaret + 2;
-       event.target.selectionEnd = posicionCaret + 2;
-     }
-    // console.log(ultimoBloqueCuatro);
-})
 
 function  validNumber(){
   let numeroTarjetaErrada;
